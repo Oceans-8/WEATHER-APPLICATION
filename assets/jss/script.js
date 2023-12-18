@@ -1,4 +1,3 @@
-
 var CityTitleElement = document.querySelector('.CityTitleElement')
 
 var SearchButton = document.getElementsByClassName('Search-Button')
@@ -30,7 +29,6 @@ var DayFiveDateEl = document.querySelector('.DayFiveDate')
 var DayFiveTempEl = document.querySelector('.DayFiveTemp')
 var DayFiveWindEl = document.querySelector('.DayFiveWind')
 var DayFiveHumidityEl = document.querySelector('.DayFiveHumidity')
-
 
 
 function searchFunction() {
@@ -264,7 +262,7 @@ function OtherSearchFunction() {
             var year = date.getFullYear();
             var formattedDate = '(' + year + '/' + (month < 10 ? '0' : '') + month + '/' + (day < 10 ? '0' : '') + day + ')';
             
-            CityTitleElement.textContent = result + ': ' + formattedDate
+            CityTitleElement.textContent = dataCurrentNew.city.name + ', ' + dataCurrentNew.city.country + ': ' + formattedDate
             TempEl.textContent = 'Temp: ' + dataCurrentNew.list[0].main.temp + '°K';
             WindEl.textContent = 'Wind: ' + dataCurrentNew.list[0].wind.speed + 'MPH';
             HumidityEl.textContent = 'Humidity: ' + dataCurrentNew.list[0].main.humidity + '%';
